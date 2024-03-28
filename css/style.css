@@ -1,0 +1,321 @@
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: #fef6e4;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 0;
+    width: 1200px;
+    margin: 0;
+    padding: 30px 0;
+}
+
+nav > a {
+    text-decoration: none;
+    font-size: 35px;
+    color: #001858;
+}
+
+nav > a:hover {
+    color: #f582ae;
+}
+
+.search-box {
+    display: inline;
+}
+
+.search-box > #box {
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
+
+.search-box > #search {
+    cursor: pointer;
+    font-size: 25px;
+    border: none;
+    background: none;
+    color: #001858;
+}
+
+.search-box > #search:hover {
+    color: #f582ae;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+    width: 1200px;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 30%;
+    font-size: 35px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+#title, #author, #year {
+    font-size: 25px;
+    border: none;
+    border-bottom: 3px solid #001858;
+    padding: 5px 10px;
+    background: none;
+}
+
+#submit {
+    cursor: pointer;
+    align-self: center;
+    width: 150px;
+    font-size: 30px;
+    border: 3px solid #001858;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background: #f3d2c1;
+    color: #001858;
+    transition: 0.3s;
+}
+
+#submit:hover {
+    transform: scale(1.1);
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90%;
+    width: 30%;
+    font-size: 30px;
+    overflow: scroll;
+}
+
+.middle > h1 {
+    text-align: center;
+    width: 100%;
+    border: 3px solid #001858;
+    border-radius: 15px 15px 0 0 ;
+    background: #fef6e4;
+    position: sticky;
+    top: 0;
+}
+
+.uncomplete {
+    width: 100%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90%;
+    width: 30%;
+    font-size: 30px;
+    overflow: scroll;
+}
+
+.right > h1 {
+    text-align: center;
+    width: 100%;
+    border: 3px solid #001858;
+    border-radius: 15px 15px 0 0 ;
+    background: #fef6e4;
+    position: sticky;
+    top: 0;
+}
+
+.complete {
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.list {
+    width: 100%;
+    font-size: 20px;
+    border-bottom: 3px solid #001858;
+    border-radius: 15px 15px 0 0 ;
+    margin: 10px 0;
+    padding: 5px 10px;
+    background: #f3d2c193;
+}
+
+.btn {
+    cursor: pointer;
+    width: 80px;
+    font-size: 20px;
+    border: none;
+    padding: 5px 10px;
+    background: none;
+    box-shadow: 0 0 #172c66;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #fef6e4;
+    transform: translate(4px, -4px);
+    box-shadow: -4px 4px #172c66;
+}
+
+.choose {
+    font-size: 40px;
+    border: 3px solid #001858;
+    border-radius: 15px;
+    margin: 0;
+    padding: 5px 10px;
+    background: #f3d2c1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.choose::backdrop {
+    background: #001858;
+    opacity: 0.3;
+}
+
+.choose > p {
+    margin: 10px 0;
+} 
+
+.choose > .button-align {
+    text-align: center;
+}
+
+.update {
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 15px 10px;
+    background: #f3d2c1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.update::backdrop {
+    background: #001858;
+    opacity: 0.3;
+}
+
+.update > .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.form > p {
+    text-align: center;
+    font-size: 40px;
+}
+
+.form > #update-title, #update-author, #update-year {
+    font-size: 20px;
+    border: none;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 3px solid #001858;
+    padding: 10px 10px;
+    background: #fef6e4;
+}
+
+.form > .button-align {
+    display: flex;
+    flex-direction: row;
+}
+
+#update-submit, #update-close {
+    cursor: pointer;
+    display: block;
+    width: 80px;
+    font-size: 20px;
+    border: none;
+    margin: auto;
+    padding: 5px 10px;
+    background: none;
+    box-shadow: 0 0 #172c66;
+    transition: 0.3s;
+}
+
+#update-submit:hover, #update-close:hover {
+    background: #fef6e4;
+    transform: translate(4px, -4px);
+    box-shadow: -4px 4px #172c66;
+}
+
+.notif {
+    font-size: 40px;
+    border: 3px solid #001858;
+    border-radius: 15px;
+    background: #f3d2c1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.notif::backdrop {
+    background: #001858;
+    opacity: 0.3;
+}
+
+.notif > p {
+    padding: 5px 10px;
+}
+
+span > button {
+    cursor: pointer;
+    font-size: 25px;
+    border: none;
+    border-radius: 0 0 0 15px;
+    border-bottom: 3.5px solid #001858;
+    border-left: 3.5px solid #001858;
+    padding: 0 10px;
+    background: none;
+    transition: 0.3s;
+}
+
+span {
+    display: flex;
+    justify-content: flex-end;
+}
