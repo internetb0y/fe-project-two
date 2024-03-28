@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Bookshelf</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Bookshelf Apps</a>
+            <form class="search-box" action="#" id="search-box">
+                <input type="search" id="box" placeholder="Search">
+            </form>
+        </nav>
+    </header>
+
+    <main class="contents">
+        <article class="left">
+            <form class="form" action="#" id="form">
+                <label for="title">Judul Buku</label>
+                <input type="text" id="title" placeholder="Judul" required>
+                <label for="author">Penulis Buku</label>
+                <input type="text" id="author" placeholder="John Doe" required>
+                <label for="year">Tahun</label>
+                <input type="number" id="year" min="1900" max="2024" placeholder="1900 s/d 2024" required>
+                <input type="submit" id="submit" value="Tambahkan">
+            </form>
+        </article>
+
+        <article class="middle">
+            <h1>Uncompleted</h1>
+            <article class="uncomplete">
+            </article>
+        </article>
+        <article class="right">
+            <h1>Completed</h1>
+            <article class="complete">
+            </article>
+        </article>
+    </main>
+
+    <dialog class="choose" id="choose">
+        <p>Yakin Ingin Menghapus List Buku Ini ❕</p>
+        <section class="button-align">
+            <button class="btn close-button">No</button>
+            <button class="btn delete-button">Yes</button>
+        </section>
+    </dialog>
+
+    <dialog class="update" id="update">
+        <form class="form" action="#" id="update-form" novalidate>
+            <p>Perbarui Data Buku</p>
+            <label for="title">Judul Buku</label>
+            <input type="text" id="update-title" placeholder="Judul" required>
+            <label for="author">Penulis Buku</label>
+            <input type="text" id="update-author" placeholder="John Doe" required>
+            <label for="year">Tahun</label>
+            <input type="number" id="update-year" min="1900" max="2024" placeholder="1900 s/d 2024" required>
+            <section class="button-align">
+                <input type="button" id="update-close" value="Close">
+                <input type="submit" id="update-submit" value="Update">
+            </section>
+        </form>
+    </dialog>
+
+    <dialog class="notif" id="notif-update">
+        <span>
+            <button class="close" id="close-update">✖</button>
+        </span>
+        <p>Data Tidak Terupdate ❕</p>
+    </dialog>
+
+    <dialog class="notif" id="notif-double">
+        <span>
+            <button class="close" id="close-double">✖</button>
+        </span>
+        <p>Buku Sudah Terdaftar ❕</p>
+    </dialog>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
