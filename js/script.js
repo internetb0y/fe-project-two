@@ -236,8 +236,6 @@ function editBook(bookId) {
 
     const updatedBook = {...bookObj};
 
-    const condition = false;
-
     if (judul === "" || penulis === "" || tahun === "") {
         const notif = document.querySelector('#notif-update');
         notif.showModal();
